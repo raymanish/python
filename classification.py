@@ -1,22 +1,27 @@
 class GradingSystem:
-
     def __init__(self):
-
-        self.average= GradingSystem.Average()
-        self.classification=''
+        # Initialize instance attributes
+        self.average = self.Average()
+        self.classification = ''
 
     def average(self):
-        num=int(input("enter the number of subject"))
-        arr_score=[]
+        # Input the number of subjects
+        num = int(input("Enter the number of subjects:"))
+        arr_score = []
+        # Input scores for each subject
         for i in range(num):
-            input_score=int(input("enter the score"))
+            input_score = int(input("Enter the score:"))
             arr_score.append(input_score)
-            sum=0
-            for i in arr_score:
-                sum=sum+i
-                average=sum/len(arr_score)
+        sum = 0
+        # Calculate the sum of scores
+        for score in arr_score:
+            sum += score
+        # Calculate the average score
+        average = sum / len(arr_score)
+        return average
 
-                return average
-            
+    # Example usage
+    grading_system = GradingSystem()
+    print("Average score:", grading_system.average)
 
-
+# Comment for the function: This class calculates the average score of subjects.
