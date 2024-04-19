@@ -1,27 +1,34 @@
 def average(array_score):
-   # array_score=[]
-    sum=0
-    for i in array_score:
-        sum=sum+i
-    avg=sum/len(array_score)
+    # Calculate the average score
+    sum = 0
+    for score in array_score:
+        sum += score
+    avg = sum / len(array_score)
     return avg
 
 def grade(score):
-    if score <50:
-        print("fail")
+    # Determine the grade based on the score
+    if score < 50:
+        print("Fail")
     else:
-        print("pass")
+        print("Pass")
 
 def main():
-    no_score = int(input("enter the total no of score your will entering"))
+    # Input the total number of scores
+    no_score = int(input("Enter the total number of scores you will be entering: "))
+
+    # Input the scores
     col_score = []
     for i in range(no_score):
-            score = int(input("enter the score"))
-            col_score.append(score)
+        score = int(input("Enter the score: "))
+        col_score.append(score)
 
-    avg=average(col_score)
-    print(avg)
-    grade1=grade(avg)
+    # Calculate the average
+    avg = average(col_score)
+    print("Average score:", avg)
 
+    # Determine the grade
+    grade(avg)
 
+# Function for use: This script calculates the average score from a set of input scores and determines whether the average score is a pass or fail.
 main()
