@@ -1,2 +1,4 @@
 # python
-coppy the program and paste it on pycharm and then execute the program by running it
+copy and save the program.
+and them paste it on pycharm.
+then run the program.
